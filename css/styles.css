@@ -1,0 +1,155 @@
+/*# sourceMappingURL=../css/styles.css.map */
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+.wide960 {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.wide-row {
+  background: url("/img/chicago.jpg") no-repeat;
+}
+.banner__firstLine {
+  text-align: center;
+  color: #fff;
+}
+.banner__firstLine::before {
+  content: '\2022';
+  font-size: 16px;
+  padding-right: 15px;
+}
+.banner__firstLine::after {
+  content: '\2022';
+  font-size: 16px;
+  padding-left: 15px;
+}
+.banner__mainText {
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+.banner__lastLine {
+  text-align: center;
+  color: #e3e3e3;
+}
+.banner__lastLine::before {
+  content: url('/img/lines.png');
+  line-height: 30px;
+  padding-right: 15px;
+  vertical-align: middle;
+  display: inline-block;
+  height: 38px;
+}
+.banner__lastLine::after {
+  content: url('/img/lines.png');
+  padding-left: 15px;
+  line-height: 30px;
+  vertical-align: middle;
+  display: inline-block;
+  height: 38px;
+}
+.banner__checkOutLine {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  border: 1px solid #979898;
+  padding: 20px 40px;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+.mainNavItem__link {
+  font: 14px "Open Sans";
+  text-transform: uppercase;
+  color: #909b9c;
+  display: block;
+}
+.mainNavItem__link.wds {
+  color: #000;
+}
+.mainNavItem__link:hover {
+  color: #fff;
+  background: #909b9c;
+  transition: all 0.5s;
+}
+@media (max-width: 768px) {
+  .mainNavItem__link {
+    text-align: center;
+    margin: 0 auto;
+    padding: 7px 0;
+  }
+  .mainNavItem__link.wds {
+    font: 900 20px Lato;
+    color: #000;
+  }
+  .mainNavItem__link:hover {
+    color: #fff;
+    background: #909b9c;
+    transition: 0.5s;
+    font-weight: bold;
+  }
+}
+@media (min-width: 768px) {
+  .mainNavItem {
+    float: left;
+  }
+  .mainNavItem__link {
+    padding: 40px 20px;
+  }
+  .mainNavItem__link.wds {
+    font: 900 40px/14px Lato;
+  }
+}
+@media (max-width: 768px) {
+  .wide-row {
+    background-size: cover;
+    padding-bottom: 20px;
+  }
+  .banner__firstLine {
+    padding-top: 10px;
+    font: 400 16px Lato;
+  }
+  .banner__mainText {
+    padding-top: 20px;
+    font: 900 32px Lato;
+  }
+  .banner__lastLine {
+    padding-top: 20px;
+    font: 400 16px Lato;
+  }
+  .banner__lastLine::before {
+    display: none;
+  }
+  .banner__lastLine::after {
+    display: none;
+  }
+  .banner__checkOutLine {
+    margin-top: 20px;
+    font: 400 16px Lato;
+  }
+}
+@media (min-width: 768px) {
+  .wide-row {
+    background-size: cover;
+  }
+  .banner {
+    height: 600px;
+  }
+  .banner__firstLine {
+    padding-top: 160px;
+    font: 400 22px Lato;
+  }
+  .banner__mainText {
+    padding-top: 30px;
+    font: 900 40px Lato;
+  }
+  .banner__lastLine {
+    padding-top: 30px;
+    font: 400 22px Lato;
+  }
+  .banner__checkOutLine {
+    margin: 75px auto 0;
+    font: 400 16px Lato;
+    width: 240px;
+  }
+}
