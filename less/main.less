@@ -1,206 +1,84 @@
 // out: ../css/styles.css, sourcemap: true
 /*# sourceMappingURL=../css/styles.css.map */
-@import url(reset.css);
-@import url( 'https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
-@import url( 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
-@import "variables.less"; // BANNER
+@import "/vendor/reset.css";
+@import "/vendor/fa/css/font-awesome.css";
+@import "https://fonts.googleapis.com/css?family=Lato:300,400,700,900";
+@import "https://fonts.googleapis.com/css?family=Open+Sans:300,400,700";
+@import "variables.less";
+@import "footer.less";
+@import "mixins.less";
+@import "main-nav.less";
+@import "homepage.less";
+@import "side-info.less";
 
-.wide960 {
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-.wide-row {
-    background: url("/img/chicago.jpg") no-repeat;
-}
-
-.banner {
-    &__firstLine {
+.services-box {
+    &__ico {
+        float: left;
+        width: 11%;
         text-align: center;
-        color: #fff;
-
-        &::before {
-            content: '\2022';
-            font-size: 16px;
-            padding-right: 15px;
-        }
-
-        &::after {
-            content: '\2022';
-            font-size: 16px;
-            padding-left: 15px;
-        }
+        .resImg();
     }
 
-    &__mainText {
-        text-align: center;
-        text-transform: uppercase;
-        color: #fff;
-    }
+    &__text {
+        float: left;
+        width: 89%;
 
-    &__lastLine {
-        text-align: center;
-        color: #e3e3e3;
-
-        &::before {
-            content: url('/img/lines.png');
-            line-height: 30px;
-            padding-right: 15px;
-            vertical-align: middle;
-            display: inline-block;
-            height: 38px;
+        .name {
+            font: 20px @lato;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
         }
 
-        &::after {
-            content: url('/img/lines.png');
-            padding-left: 15px;
-            line-height: 30px;
-            vertical-align: middle;
-            display: inline-block;
-            height: 38px;
-        }
-    }
-
-    &__checkOutLine {
-        display: block;
-        text-align: center;
-        text-decoration: none;
-        text-transform: uppercase;
-        color: #fff;
-        border: 1px solid #979898;
-        padding: 20px 40px;
-        background-color: rgba(0, 0, 0, 0.35);
-    }
-}
-// MAIN NAVIGATION
-
-.mainNavItem {
-    &__link {
-        font: 14px "Open Sans";
-        text-transform: uppercase;
-        color: #909b9c;
-        display: block;
-
-        &.wds {
-            color: #000;
+        .about {
+            font: 14px/22px @os;
+            color: @content-color;
+            padding-top: 5px;
         }
 
-        &:hover {
-            color: #fff;
-            background: #909b9c;
+        .link {
+            font: 14px/28px @os;
+            color: @content-color;
+            text-decoration: underline;
             transition: all 0.5s;
-        }
-    }
-}
-@media (max-width: 768px) {
-
-    .mainNavItem {
-        &__link {
-            text-align: center;
-            margin: 0 auto;
-            padding: 7px 0;
-
-            &.wds {
-                font: 900 20px @lato;
-                color: #000;
-            }
 
             &:hover {
-                color: #fff;
-                background: #909b9c;
-                transition: 0.5s;
                 font-weight: bold;
             }
         }
     }
 }
+@media (max-width: 767px) {
+    .content {
+        padding: 0 1%;
 
-@media (min-width: 768px) {
-  .mainNavItem {
-    float: left;
-
-      &__link {
-        padding: 40px 20px;
-
-          &.wds {
-            font: 900 40px/14px @lato;
-
-          }
-          //
-          // &:hover {
-          //
-          // }
-      }
-  }
-}
-
-
-
-// SMALL SCREEN
-@media (max-width: 768px) {
-    .wide-row {
-        background-size: cover;
-        padding-bottom: 20px;
-    }
-
-    .banner {
-        &__firstLine {
-            padding-top: 10px;
-            font: 400 16px @lato;
-        }
-
-        &__mainText {
-            padding-top: 20px;
-            font: 900 32px @lato;
-        }
-
-        &__lastLine {
-            padding-top: 20px;
-            font: 400 16px @lato;
-
-            &::before {
-                display: none;
-            }
-
-            &::after {
-                display: none;
-            }
-        }
-
-        &__checkOutLine {
-            margin-top: 20px;
-            font: 400 16px @lato;
+        .services-box {
+            border-bottom: 1px solid black;
+            margin-top: 8px;
         }
     }
 }
-// BIG SCREEN
 @media (min-width: 768px) {
-    .wide-row {
-        background-size: cover;
+    .content {
+        .wide960();
+        margin: 0 auto;
     }
 
-    .banner {
-        height: 600px;
+    .services-box {
+        float: left;
+        width: 50%;
 
-        &__firstLine {
-            padding-top: 160px;
-            font: 400 22px @lato;
+        &:nth-child(2n+1) {
+            padding-right: 20px;
         }
 
-        &__mainText {
-            padding-top: 30px;
-            font: 900 40px @lato;
+        &:nth-child(2n) {
+            padding-left: 20px;
         }
 
-        &__lastLine {
-            padding-top: 30px;
-            font: 400 22px @lato;
-        }
-
-        &__checkOutLine {
-            margin: 75px auto 0;
-            font: 400 16px @lato;
-            width: 240px;
+        .about {
+            height: 70px;
+            overflow: hidden;
         }
     }
 }

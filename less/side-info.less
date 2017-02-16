@@ -1,0 +1,36 @@
+.side-info {
+    text-align: center;
+
+    &__about {
+        color: @content-color;
+    }
+}
+@media (max-width: 767px) {
+    .side-info {
+      padding: 0 1%;
+
+        &__name {
+            font: 300 20px @lato;
+            padding: 15px 0 0;
+        }
+
+        &__about {
+            font: 14px @os;
+            padding: 0 0 15px;
+        }
+    }
+}
+@media (min-width: 768px) {
+    .side-info {
+        .wide960();
+        &__name {
+            font: 300 40px @lato;
+            padding: 60px 0 35px;
+        }
+
+        &__about {
+            font: 18px @os;
+            padding: 20px 10% 60px;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.wide960() {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.resImg() {
+  img {
+    max-width: 100%;
+  }
+}
+
+.transition() {
+    transition: all 0.5s;
+}
+
+.dots (@right:0, @left:0) {
+    padding: 0 @right 0 @left;
+    content: '\2022';
+    font-size: 16px;
+}
+
+.double-narrow (@right:0, @left:0) {
+    padding: 0 @right 0 @left;
+    content: url('/img/lines.png');
+    line-height: 30px;
+    vertical-align: middle;
+    display: inline-block;
+    height: 38px;
+}
