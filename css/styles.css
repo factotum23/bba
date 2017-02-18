@@ -606,15 +606,15 @@ a {
     width: 50%;
     padding-bottom: 37px;
   }
-  .block__img {
-    height: 284px;
-    overflow: hidden;
-  }
   .block:nth-child(2n+1) {
     padding-right: 20px;
   }
   .block:nth-child(2n) {
     padding-left: 20px;
+  }
+  .block__img {
+    height: 284px;
+    overflow: hidden;
   }
 }
 .person {
@@ -661,10 +661,10 @@ a {
 @media (min-width: 768px) {
   .person {
     float: left;
-    width: 25%;
+    width: calc(25% - 15px);
   }
   .person:not(:nth-child(4n)) {
-    padding-right: 20px;
+    margin-right: 20px;
   }
   .person__img {
     height: 225px;

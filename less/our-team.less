@@ -47,11 +47,8 @@
 @media (min-width: 768px) {
     .person {
         float: left;
-        width: 25%;
-
-        &:not(:nth-child(4n)) {
-            padding-right: 20px;
-        }
+        width: calc(~'25% - 15px');  //calc column width (25% - 20(margin-right)*3(columns with raight margin)/4 columns in a row)
+        .margin-col(4, 20px);  // 4 columns, margin-right 20px for every column apart from lastOne
 
         &__img {
             height: 225px;
