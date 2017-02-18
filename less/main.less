@@ -1,6 +1,6 @@
 // out: ../css/styles.css, sourcemap: true
 /*# sourceMappingURL=../css/styles.css.map */
-@import "/vendor/reset.css";
+@import (less) "../vendor/reset.css";
 @import "/vendor/fa/css/font-awesome.css";
 @import "https://fonts.googleapis.com/css?family=Lato:300,400,700,900";
 @import "https://fonts.googleapis.com/css?family=Open+Sans:300,400,700";
@@ -8,77 +8,9 @@
 @import "footer.less";
 @import "mixins.less";
 @import "main-nav.less";
-@import "homepage.less";
+@import "common.less";
 @import "side-info.less";
-
-.services-box {
-    &__ico {
-        float: left;
-        width: 11%;
-        text-align: center;
-        .resImg();
-    }
-
-    &__text {
-        float: left;
-        width: 89%;
-
-        .name {
-            font: 20px @lato;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-        }
-
-        .about {
-            font: 14px/22px @os;
-            color: @content-color;
-            padding-top: 5px;
-        }
-
-        .link {
-            font: 14px/28px @os;
-            color: @content-color;
-            text-decoration: underline;
-            transition: all 0.5s;
-
-            &:hover {
-                font-weight: bold;
-            }
-        }
-    }
-}
-@media (max-width: 767px) {
-    .content {
-        padding: 0 1%;
-
-        .services-box {
-            border-bottom: 1px solid black;
-            margin-top: 8px;
-        }
-    }
-}
-@media (min-width: 768px) {
-    .content {
-        .wide960();
-        margin: 0 auto;
-    }
-
-    .services-box {
-        float: left;
-        width: 50%;
-
-        &:nth-child(2n+1) {
-            padding-right: 20px;
-        }
-
-        &:nth-child(2n) {
-            padding-left: 20px;
-        }
-
-        .about {
-            height: 70px;
-            overflow: hidden;
-        }
-    }
-}
+@import "homepage.less";
+@import "services.less";
+@import "portfolio.less";
+@import "our-team.less";

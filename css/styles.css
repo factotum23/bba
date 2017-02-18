@@ -1,8 +1,155 @@
 /*# sourceMappingURL=../css/styles.css.map */
-@import "/vendor/reset.css";
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 @import "/vendor/fa/css/font-awesome.css";
 @import "https://fonts.googleapis.com/css?family=Lato:300,400,700,900";
 @import "https://fonts.googleapis.com/css?family=Open+Sans:300,400,700";
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* ARTEM CUSTOM */
+* {
+  -webkit-padding-start: 0px;
+  -moz-padding-start: 0px;
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+.clearfix::after {
+  clear: both;
+  display: block;
+  content: "";
+}
 .footer {
   background: #000;
   color: #666;
@@ -112,6 +259,57 @@
   }
   .mainNavItem__link.wds {
     font: 900 40px/110px Lato;
+  }
+}
+@media (max-width: 767px) {
+  .content {
+    padding: 0 1% 2%;
+  }
+  .wds {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding-bottom: 1%;
+  }
+}
+.side-info {
+  text-align: center;
+}
+.side-info__about {
+  color: #606060;
+}
+.side-info__about p {
+  padding-bottom: 2%;
+}
+@media (max-width: 767px) {
+  .side-info {
+    padding: 0 1%;
+  }
+  .side-info__name {
+    font: 300 20px Lato;
+    padding: 15px 0 0;
+  }
+  .side-info__about {
+    font: 14px "Open Sans";
+    padding: 0 0 15px;
+  }
+}
+@media (min-width: 768px) {
+  .side-info {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  .side-info__name {
+    font: 300 40px Lato;
+    padding: 60px 0 35px;
+  }
+  .side-info__about {
+    font: 18px "Open Sans";
+    padding: 20px 10% 60px;
   }
 }
 .banner-wrapper {
@@ -286,10 +484,6 @@
   max-width: 960px;
   margin: 0 auto;
 }
-.our-clients__about {
-  color: #606060;
-  font: 14px "Open Sans";
-}
 .our-clients .logo {
   display: block;
 }
@@ -305,13 +499,11 @@
 }
 .our-clients .logo__item img {
   max-width: 100%;
+  max-height: inherit;
 }
 @media (max-width: 767px) {
   .our-clients {
     padding: 30px 0 0;
-  }
-  .our-clients__name {
-    font: 300 20px Lato;
   }
   .our-clients .logo {
     padding: 25px 0 0;
@@ -326,49 +518,8 @@
   .our-clients {
     padding: 80px 0 95px;
   }
-  .our-clients__name {
-    font: 300 40px Lato;
-    padding-bottom: 35px;
-  }
-  .our-clients__about {
-    font: 18px "Open Sans";
-    padding: 30px 0 60px;
-  }
   .our-clients .logo__item {
     width: 20%;
-  }
-}
-.side-info {
-  text-align: center;
-}
-.side-info__about {
-  color: #606060;
-}
-@media (max-width: 767px) {
-  .side-info {
-    padding: 0 1%;
-  }
-  .side-info__name {
-    font: 300 20px Lato;
-    padding: 15px 0 0;
-  }
-  .side-info__about {
-    font: 14px "Open Sans";
-    padding: 0 0 15px;
-  }
-}
-@media (min-width: 768px) {
-  .side-info {
-    max-width: 960px;
-    margin: 0 auto;
-  }
-  .side-info__name {
-    font: 300 40px Lato;
-    padding: 60px 0 35px;
-  }
-  .side-info__about {
-    font: 18px "Open Sans";
-    padding: 20px 10% 60px;
   }
 }
 .services-box__ico {
@@ -378,6 +529,7 @@
 }
 .services-box__ico img {
   max-width: 100%;
+  max-height: inherit;
 }
 .services-box__text {
   float: left;
@@ -404,19 +556,12 @@
   font-weight: bold;
 }
 @media (max-width: 767px) {
-  .content {
-    padding: 0 1%;
-  }
-  .content .services-box {
+  .services-box {
     border-bottom: 1px solid black;
     margin-top: 8px;
   }
 }
 @media (min-width: 768px) {
-  .content {
-    max-width: 960px;
-    margin: 0 auto;
-  }
   .services-box {
     float: left;
     width: 50%;
@@ -430,5 +575,109 @@
   .services-box .about {
     height: 70px;
     overflow: hidden;
+  }
+}
+.block {
+  display: block;
+  text-align: center;
+}
+.block img {
+  max-width: 100%;
+  max-height: inherit;
+}
+.block__about {
+  font: 16px "Open Sans";
+}
+.block__about .link {
+  color: #000;
+}
+.block__about .link:hover {
+  font-weight: bold;
+}
+@media (max-width: 767px) {
+  .block {
+    border-bottom: 1px solid black;
+    margin-top: 15px;
+  }
+}
+@media (min-width: 768px) {
+  .block {
+    float: left;
+    width: 50%;
+    padding-bottom: 37px;
+  }
+  .block__img {
+    height: 284px;
+    overflow: hidden;
+  }
+  .block:nth-child(2n+1) {
+    padding-right: 20px;
+  }
+  .block:nth-child(2n) {
+    padding-left: 20px;
+  }
+}
+.person {
+  text-align: center;
+}
+.person img {
+  max-width: 100%;
+  max-height: inherit;
+}
+.person__name {
+  font: 16px "Open Sans";
+  color: #000;
+}
+.person__about {
+  font: 12px/18px "Open Sans";
+  color: #606060;
+}
+.person__social {
+  padding: 5px 0;
+}
+.person__social a {
+  color: #000;
+  font-size: 24px;
+  transition: all 0.5s;
+}
+.person__social a:not(:last-child) {
+  margin-right: 7%;
+}
+.person__social a:hover {
+  color: #666;
+}
+@media (max-width: 767px) {
+  .person {
+    padding: 1% 0;
+    border-bottom: 1px solid black;
+  }
+  .person__name {
+    padding: 5px 0;
+  }
+  .person__social {
+    padding: 5px 0;
+  }
+}
+@media (min-width: 768px) {
+  .person {
+    float: left;
+    width: 25%;
+  }
+  .person:not(:nth-child(4n)) {
+    padding-right: 20px;
+  }
+  .person__img {
+    height: 225px;
+    overflow: hidden;
+  }
+  .person__name {
+    padding: 10px 0;
+  }
+  .person__about {
+    height: 54px;
+    overflow: hidden;
+  }
+  .person__social {
+    padding: 20px 0 40px;
   }
 }

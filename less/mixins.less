@@ -6,6 +6,7 @@
 .resImg() {
   img {
     max-width: 100%;
+    max-height: inherit;
   }
 }
 
@@ -26,4 +27,15 @@
     vertical-align: middle;
     display: inline-block;
     height: 38px;
+}
+
+.clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
 }
