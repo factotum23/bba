@@ -3,9 +3,11 @@
 .footer {
     background: @ft-bg-color;
     color: @ft-color;
+
     .footer-inner {
-      .wide960();
+        .wide960();
     }
+
     .ft-social {
         &__item {
             color: inherit;
@@ -25,7 +27,7 @@
 
         .ft-social {
             font-size: 40px;
-            padding: 15px 0;
+            padding: 15px 0 7px;
 
             &__item {
                 width: 20%;
@@ -33,13 +35,27 @@
         }
 
         .ft-text {
-            padding: 15px 0;
+            padding: 7px 0 15px;
         }
     }
 }
 @media (min-width: 768px) {
+    html, body {
+        height: 100%;
+    }
+    .page-wrapper {
+      min-height: 100%;
+      position: relative;
+    }
+    .main-content {
+      padding-bottom: 60px;
+    }
     .footer {
         height: 60px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
 
         .ft-social {
             float: left;
