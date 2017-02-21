@@ -11,8 +11,8 @@
     .ft-social {
         &__item {
             color: inherit;
-            .transition();
             padding: 0 5px;
+            transition: color 0.5s;
 
             &:hover {
                 color: @ft-hov-color;
@@ -40,16 +40,20 @@
     }
 }
 @media (min-width: 768px) {
-    html, body {
+    body,
+    html {
         height: 100%;
     }
+
     .page-wrapper {
-      min-height: 100%;
-      position: relative;
+        min-height: 100%;
+        position: relative;
     }
+
     .main-content {
-      padding-bottom: 60px;
+        padding-bottom: 60px;
     }
+
     .footer {
         height: 60px;
         position: absolute;

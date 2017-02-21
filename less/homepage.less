@@ -130,11 +130,11 @@
     }
 
     .icon {
-        .transition();
         display: block;
         color: #000;
         width: 20%;
         float: left;
+        transition: color .5s;
 
         &.active,
         &:hover {
@@ -196,10 +196,10 @@
         display: block;
 
         &__item {
-            .transition();
             display: block;
             float: left;
             height: 75px;
+            transition: background .5s, border-radius .5s;
 
             &:hover {
                 background: #eaeaea;

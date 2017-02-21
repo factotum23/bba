@@ -5,9 +5,9 @@
 @import "https://fonts.googleapis.com/css?family=Lato:300,400,700,900";
 @import "https://fonts.googleapis.com/css?family=Open+Sans:300,400,700";
 @import "variables.less";
-@import "footer.less";
 @import "mixins.less";
 @import "main-nav.less";
+@import "footer.less";
 @import "common.less";
 @import "side-info.less";
 @import "homepage.less";
@@ -15,135 +15,27 @@
 @import "portfolio.less";
 @import "our-team.less";
 @import "ourblog.less";
+@import "contact-us.less";
 
-.preform {
-    &__name {
-        font: 20px @lato;
+.go-top {
+    width: 45px;
+    height: 45px;
+    background: #E6A06E;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    display: block;
+    text-align: center;
+    font-size: 36px;
+    line-height: 45px;
+    color: #fff;
+    border-radius: 50%;
+    z-index: 100;
+    opacity: 0.5;
+    transition: transform 0.5s;
+
+    &:hover {
+        opacity: 0.7;
+        transform: rotate(-360deg);
     }
-
-    &__about {
-        font: 14px @os;
-        color: #606060;
-        padding-bottom: 2%;
-    }
-}
-
-.form {
-    &__submit {
-        display: block;
-        margin: 0 auto;
-        border: none;
-        background: #2980b9;
-        color: #f3f3f3;
-        font: 14px/22px @os;
-        text-transform: uppercase;
-        padding: 5px 20%;
-        .transition();
-
-        &:hover {
-            font-weight: bold;
-            background: lighten(#2980b9, 20%);
-        }
-    }
-}
-
-.address {
-    &__name {
-        text-align: center;
-        font: 20px @lato;
-        margin: 0 auto;
-    }
-
-    &__about {
-        font: 14px @os;
-        color: #606060;
-        padding-bottom: 2%;
-        margin: 0 auto;
-
-        p:first-child {
-            padding-bottom: 4%;
-        }
-    }
-
-    &__img {
-        display: block;
-        margin: 0 auto;
-        text-align: center;
-        .resImg();
-    }
-}
-@media (max-width: 767px) {
-    .preform {
-        text-align: center;
-
-        &__name {
-            padding-bottom: 2%;
-        }
-    }
-
-    .form {
-        max-width: 90%;
-        margin: 0 auto;
-
-        .form__name {
-            .form(10px)
-        }
-
-        &__mail {
-            .form(10px)
-        }
-
-        &__message {
-            .form(10px)
-        }
-    }
-
-    .address {
-        &__name {
-            padding: 15px 0 10px;
-            max-width: 90%;
-        }
-        &__about {
-          max-width: 90%;
-        }
-    }
-}
-@media (min-width: 768px) {
-    .preform {
-        &__name {
-            padding-bottom: 4px;
-        }
-    }
-
-    .left {
-        float: left;
-        width: 50%;
-        padding-right: 20px;
-    }
-
-    .right {
-        float: right;
-        width: 50%;
-        padding-left: 20px;
-    }
-
-    .form {
-        .form__name {
-            .form(15px)
-        }
-
-        &__mail {
-            .form(15px)
-        }
-
-        &__message {
-            .form(15px)
-        }
-    }
-    .address {
-        &__name {
-            padding-bottom: 4px;
-        }
-
-}
 }
