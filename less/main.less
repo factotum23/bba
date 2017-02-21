@@ -39,3 +39,17 @@
         transform: rotate(-360deg);
     }
 }
+
+@media (min-width: 768px) {
+    .our-clients {
+        padding: 80px 0 95px;
+
+        .logo__item {
+            width: 20%;
+            transition: transform 1s;
+            &:hover {
+              transform: rotateX(360deg);
+            }
+        }
+    }
+}

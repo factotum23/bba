@@ -1,3 +1,5 @@
+
+
 .our-blog {
     text-align: center;
 
@@ -9,5 +11,9 @@
 
     &__img {
         .resImg();
+        transition: transform 2s;
+        &:hover {
+          transform: rotate3d(0, 1, 0, 360deg);
+        }
     }
 }

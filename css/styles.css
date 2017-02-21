@@ -506,11 +506,6 @@ a {
   display: block;
   float: left;
   height: 75px;
-  transition: background 0.5s, border-radius 0.5s;
-}
-.our-clients .logo__item:hover {
-  background: #eaeaea;
-  border-radius: 5px;
 }
 .our-clients .logo__item img {
   max-width: 100%;
@@ -527,14 +522,6 @@ a {
     float: left;
     width: 50%;
     margin-bottom: 20px;
-  }
-}
-@media (min-width: 768px) {
-  .our-clients {
-    padding: 80px 0 95px;
-  }
-  .our-clients .logo__item {
-    width: 20%;
   }
 }
 .services-box__ico {
@@ -704,9 +691,15 @@ a {
   color: #000;
   padding-bottom: 6%;
 }
+.our-blog__img {
+  transition: transform 2s;
+}
 .our-blog__img img {
   max-width: 100%;
   max-height: inherit;
+}
+.our-blog__img:hover {
+  transform: rotate3d(0, 1, 0, 360deg);
 }
 .preform__name {
   font: 20px Lato;
@@ -865,4 +858,16 @@ a {
 .go-top:hover {
   opacity: 0.7;
   transform: rotate(-360deg);
+}
+@media (min-width: 768px) {
+  .our-clients {
+    padding: 80px 0 95px;
+  }
+  .our-clients .logo__item {
+    width: 20%;
+    transition: transform 1s;
+  }
+  .our-clients .logo__item:hover {
+    transform: rotateX(360deg);
+  }
 }
