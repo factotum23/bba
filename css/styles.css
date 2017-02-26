@@ -3,7 +3,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import "/vendor/fa/css/font-awesome.css";
+@import "../vendor/fa/css/font-awesome.css";
 @import "https://fonts.googleapis.com/css?family=Lato:300,400,700,900";
 @import "https://fonts.googleapis.com/css?family=Open+Sans:300,400,700";
 html,
@@ -328,7 +328,7 @@ a {
   }
 }
 .banner-wrapper {
-  background: url("/img/chicago.jpg") no-repeat;
+  background: url("../img/chicago.jpg") no-repeat;
 }
 .banner {
   max-width: 960px;
@@ -359,7 +359,7 @@ a {
 }
 .banner__lastLine::before {
   padding: 0 15px 0 0;
-  content: url('/img/lines.png');
+  content: url('../img/lines.png');
   line-height: 30px;
   vertical-align: middle;
   display: inline-block;
@@ -367,7 +367,7 @@ a {
 }
 .banner__lastLine::after {
   padding: 0 0 0 15px;
-  content: url('/img/lines.png');
+  content: url('../img/lines.png');
   line-height: 30px;
   vertical-align: middle;
   display: inline-block;
@@ -439,7 +439,7 @@ a {
   }
 }
 .solutions-wrapper {
-  background-image: url("/img/bg2.png");
+  background-image: url("../img/bg2.png");
 }
 .solutions {
   text-align: center;
@@ -454,7 +454,7 @@ a {
   color: #000;
   width: 20%;
   float: left;
-  transition: color .5s;
+  transition: color 0.5s;
 }
 .solutions .icon.active,
 .solutions .icon:hover {
