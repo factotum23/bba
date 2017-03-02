@@ -3830,9 +3830,6 @@ a {
   z-index: 100;
   opacity: 0.5;
 }
-.go-top:hover {
-  opacity: 0.7;
-}
 @media (min-width: 768px) {
   .go-top {
     transition: transform 0.5s;
@@ -3840,5 +3837,6 @@ a {
   .go-top:hover {
     transform: rotate(-360deg);
     transition: none;
+    opacity: 0.7;
   }
 }
