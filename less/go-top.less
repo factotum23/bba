@@ -13,12 +13,17 @@
     border-radius: 50%;
     z-index: 100;
     opacity: 0.5;
-    transition: transform 0.5s;
-
 
     &:hover {
         opacity: 0.7;
-        transform: rotate(-360deg);
-        transition: none;
+    }
+}
+@media (min-width: 768px) {
+    .go-top {
+        transition: transform 0.5s;
+        &:hover {
+          transform: rotate(-360deg);
+          transition: none;
+        }
     }
 }
