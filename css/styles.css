@@ -3244,6 +3244,7 @@ a {
 .banner {
   max-width: 960px;
   margin: 0 auto;
+  height: 100vh;
 }
 .banner__firstLine {
   text-align: center;
@@ -3329,7 +3330,6 @@ a {
     background-size: cover;
   }
   .banner {
-    height: 600px;
     padding-top: 160px;
   }
   .banner__firstLine {
