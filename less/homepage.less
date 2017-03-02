@@ -1,5 +1,8 @@
 .banner-wrapper {
     background: url("../img/chicago.jpg") no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 .banner {
@@ -50,8 +53,8 @@
 }
 @media (max-width: 767px) {
     .banner-wrapper {
-        background-size: cover;
         padding-bottom: 20px;
+        background-position: center -122px;
     }
 
     .banner {
@@ -86,9 +89,6 @@
     }
 }
 @media (min-width: 768px) {
-    .banner-wrapper {
-        background-size: cover;
-    }
 
     .banner {
         height: 100vh;
@@ -119,6 +119,7 @@
 
 .solutions-wrapper {
     background-image: url("../img/bg2.png");
+    background-attachment: fixed;
 }
 
 .solutions {
